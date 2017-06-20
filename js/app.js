@@ -1,5 +1,12 @@
 "use strict";
+// (function(){
+//
+//
+// })();
 
-(function(){
-  angular.module("wdinstagram", [])
-})();
+angular.module("wdinstagram",[])
+       .controller("mainController",[MainControllerFunction])
+
+function MainControllerFunction(){
+  console.log("I am the controller")
+}
