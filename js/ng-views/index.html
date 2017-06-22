@@ -1,10 +1,16 @@
 <p>Index</p>
-<div ng-repeat="authori in vm.datas">
+<!-- <div ng-repeat="authori in vm.datas">
   <a ui-sref="show({id: authori.id})"> {{authori.photo_url}} {{authori.author}} {{authori.body}}</a>
    <button data-ng-click="vm.destroy()">Delete</button>
+</div> -->
+<a data-ui-sref="New">New</a>
+<<div data-ng-repeat="entry in vm.entrys | orderBy:'-created_at'">
+  <p><a data-ui-sref="show({id: entry.id})">{{entry.author}}</a>
+   <a data-ui-sref="edit({id: entry.id})">Edit</a></p>
 </div>
 
-<details>
+
+<!-- <details>
   <summary>
     To create new post, click here.
   </summary>
@@ -13,4 +19,4 @@
   <input type="text" placeholder="Enter author body" ng-model="vm.message">
   <button ng-click="vm.createnew()">Create</button>
 
-</deatils>
+</deatils> -->
